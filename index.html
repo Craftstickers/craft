@@ -7,11 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/craft.css" rel="stylesheet">
-<link href="css/Craft-Stickers.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
 <script src="jquery-1.12.4.min.js"></script>
 <script src="jquery.ui.effect.min.js"></script>
 <script src="popper.min.js"></script>
 <script src="bootstrap.min.js"></script>
+<script src="wb.conveyerbelt.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function(event)
 {
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function(event)
          }
       }
    });
+   var SlideShow2 = new bootstrap.Carousel("#SlideShow2", {interval:3000, ride: true});
 });
 </script>
 <script>
@@ -91,11 +93,6 @@ $(document).ready(function()
       event.preventDefault();
       $('html, body').stop().animate({ scrollTop: $('#wb_Magazin').offset().top }, 600, 'easeOutExpo');
    });
-   $("a[href*='#contact']").click(function(event)
-   {
-      event.preventDefault();
-      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top }, 600, 'easeOutExpo');
-   });
    $("#RollOverText1").hover(function()
    {
       var y = $(this).height() - $(".caption", this).outerHeight();
@@ -104,6 +101,12 @@ $(document).ready(function()
    }, function()
    {
       $(".caption", this).stop().animate({opacity: 0},{queue:false, duration:500});
+   });
+   $("#SlideShow1").conveyerbelt({speed:3, spacing: 5});
+   $("a[href*='#contact']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top }, 600, 'easeOutExpo');
    });
    var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
    if (iOS)
@@ -114,6 +117,10 @@ $(document).ready(function()
 </script>
 </head>
 <body>
+<div id="Layer1" style="position:absolute;text-align:center;left:0px;top:3511px;width:956px;height:120px;z-index:33;">
+<div id="Layer1_Container" style="width:956px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+</div>
+</div>
 <div id="wb_header">
 <div id="header">
 <div class="row">
@@ -170,7 +177,7 @@ $(document).ready(function()
 <div id="wb_Text2">
 <span style="color:#FFFFFF;font-family:Arial;font-size:24px;">Alege dintre produsele noastre sau personalizeză-ti articolul dorit,<br>ne contactezi iar noi iti transmitem urmatorii pasi pentru a ajunge comanda la tine.</span>
 </div>
-<a id="Button1" href="./Craft-Stickers.html#contact" style="display:inline-block;width:140px;height:25px;z-index:4;">Contactează-ne!</a>
+<a id="Button1" href="./index.html#contact" style="display:inline-block;width:140px;height:25px;z-index:4;">Contactează-ne!</a>
 </div>
 </div>
 </div>
@@ -182,7 +189,7 @@ $(document).ready(function()
 <div id="coffeeCard1-card-item1">Tricou</div>
 <hr id="coffeeCard1-card-item2">
 <div id="coffeeCard1-card-item3">Model ARO</div>
-<div id="coffeeCard1-card-item4"><a href="./Craft-Stickers.html#Magazin">Vezi mai multe...</a></div>
+<div id="coffeeCard1-card-item4"><a href="./index.html#Magazin">Vezi mai multe...</a></div>
 </div>
 </div>
 <div id="wb_coffeeCard3" style="display:flex;z-index:6;" class="card">
@@ -191,7 +198,7 @@ $(document).ready(function()
 <div id="coffeeCard3-card-item1">Tricouri personalizate</div>
 <hr id="coffeeCard3-card-item2">
 <div id="coffeeCard3-card-item3">Trimite-ne designul tau si noi iti personalizăm tricoul dorit.</div>
-<div id="coffeeCard3-card-item4"><a href="./Craft-Stickers.html#Magazin">Vezi mai multe...</a></div>
+<div id="coffeeCard3-card-item4"><a href="./index.html#Magazin">Vezi mai multe...</a></div>
 </div>
 </div>
 <div id="wb_coffeeCard2" style="display:flex;z-index:7;" class="card">
@@ -200,7 +207,7 @@ $(document).ready(function()
 <div id="coffeeCard2-card-item1">Stickere personalizate.</div>
 <hr id="coffeeCard2-card-item2">
 <div id="coffeeCard2-card-item3">Stickere printate sau din vinil cu design personalizat.</div>
-<div id="coffeeCard2-card-item4"><a href="./Craft-Stickers.html#Magazin">Vezi mai multe...</a></div>
+<div id="coffeeCard2-card-item4"><a href="./index.html#Magazin">Vezi mai multe...</a></div>
 </div>
 </div>
 </div>
@@ -234,59 +241,84 @@ $(document).ready(function()
 <div id="Magazin">
 <div class="row">
 <div class="col-1">
-<div id="wb_Card47" style="display:flex;width:100%;z-index:12;" class="card">
-<div id="Card47-card-body">
-<div id="Card47-card-item0">Tricou model ARO<span class="badge" style="background-color:#000000;color:#E7B360">50lei</span></div>
-<div id="Card47-card-item1">Tricou din bumbac cu design ARO,oriunde,oricând</div>
-<img id="Card47-card-item2" src="images/9e3bfa34-77f7-424f-b89a-bca661691007.jpg" width="1036" height="1456" alt="" title="">
-</div>
-</div>
-<div id="wb_Card3" style="display:flex;width:100%;z-index:13;" class="card">
+<div id="wb_Card3" style="display:flex;width:100%;z-index:12;" class="card">
 <div id="Card3-card-body">
 <div id="Card3-card-item0">sticker printat rotund<span class="badge" style="background-color:#000000;color:#E7B360">50bani/buc</span></div>
 <div id="Card3-card-item1">Sticker printat de interior cu diametru de 5 cm</div>
 <img id="Card3-card-item2" src="2968222c-eb11-4699-966c-87f21f9f82a4.jpeg" width="2048" height="2048" alt="" title="">
 </div>
 </div>
+<div id="wb_Card8" style="display:flex;width:100%;z-index:13;" class="card">
+<div id="Card8-card-body">
+<div id="Card8-card-item0">Tricou model ARO<span class="badge" style="background-color:#000000;color:#E7B360">50lei</span></div>
+<div id="Card8-card-item1">Tricou din bumbac cu design ARO,oriunde,oricând</div>
+<img id="Card8-card-item2" src="images/9e3bfa34-77f7-424f-b89a-bca661691007.jpg" width="1036" height="1456" alt="" title="">
+</div>
+</div>
+<div id="wb_Card9" style="display:flex;width:100%;z-index:14;" class="card">
+<div id="Card9-card-body">
+<div id="Card9-card-item0">Semn de carte<span class="badge" style="background-color:#000000;color:#E7B360">5 lei/buc</span></div>
+<div id="Card9-card-item1">Diferite semne de carte cu design prestabilit sau personalizat.</div>
+<img id="Card9-card-item2" src="images/300153980_134170039323455_3258417638777663177_n.jpg" width="600" height="510" alt="" title="">
+</div>
+</div>
 </div>
 <div class="col-2">
-<div id="wb_Card1" style="display:flex;width:100%;z-index:14;" class="card">
+<div id="wb_Card1" style="display:flex;width:100%;z-index:15;" class="card">
 <div id="Card1-card-body">
 <div id="Card1-card-item0">Tricou model DACIA<span class="badge" style="background-color:#000000;color:#E7B360">50lei</span></div>
 <div id="Card1-card-item1">Tricou din bumbac cu model prestabilit masina dacia</div>
 <img id="Card1-card-item2" src="45c9e17b-18a9-4289-96e4-06fcf5b9a784.jpeg" width="2048" height="2048" alt="" title="">
 </div>
 </div>
-<div id="wb_Card4" style="display:flex;width:100%;z-index:15;" class="card">
-<div id="Card4-card-body">
-<div id="Card4-card-item0">Sticker aro 243<span class="badge" style="background-color:#000000;color:#E7B360">35 lei</span></div>
-<div id="Card4-card-item1">Sticker din vinil perfect pentru aplicare pe mașina,atât pentru interior,cât și pentru exterior</div>
-<img id="Card4-card-item2" src="images/352238571_643246291012947_3003144570942020066_n.jpg" width="1536" height="2048" alt="" title="">
+<div id="wb_Card6" style="display:flex;width:100%;z-index:16;" class="card">
+<div id="Card6-card-body">
+<div id="Card6-card-item0">Sticker aro 243<span class="badge" style="background-color:#000000;color:#E7B360">35 lei</span></div>
+<div id="Card6-card-item1">Sticker din vinil perfect pentru aplicare pe mașina,atât pentru interior,cât și pentru exterior</div>
+<img id="Card6-card-item2" src="images/352238571_643246291012947_3003144570942020066_n.jpg" width="1536" height="2048" alt="" title="">
+</div>
+</div>
+<div id="wb_Card47" style="display:flex;width:100%;z-index:17;" class="card">
+<div id="Card47-card-body">
+<div id="Card47-card-item0">Tricou <span class="badge" style="background-color:#000000;color:#E7B360">50lei</span></div>
+<div id="Card47-card-item1">Tricou din bumbac,nu am timp, ma duc la arat</div>
+<img id="Card47-card-item2" src="images/363364980_255890197206985_6777472149793239520_n.jpg" width="1536" height="2048" alt="" title="">
 </div>
 </div>
 </div>
 <div class="col-3">
-<div id="wb_Card2" style="display:flex;width:100%;z-index:16;" class="card">
+<div id="wb_Card7" style="display:flex;width:100%;z-index:18;" class="card">
+<div id="Card7-card-body">
+<div id="Card7-card-item0">Invitatie<span class="badge">1</span></div>
+<div id="Card7-card-item1">Diferite invitatii de nunta sau de botez cu design prestabilit sau personalizat.</div>
+<img id="Card7-card-item2" src="images/447893089_435871092542227_2933546639951476078_n.jpg" width="2048" height="1994" alt="" title="">
+</div>
+</div>
+<div id="wb_Card4" style="display:flex;width:100%;z-index:19;" class="card">
+<div id="Card4-card-body">
+<div id="Card4-card-item0">Diplome<span class="badge" style="background-color:#000000;color:#E7B360">1leu/buc</span></div>
+<div id="Card4-card-item1">Diplome din carton lucioase/mate</div>
+<img id="Card4-card-item2" src="images/SGHSE.jpg" width="1152" height="2048" alt="" title="">
+</div>
+</div>
+<div id="wb_Card2" style="display:flex;width:100%;z-index:20;" class="card">
 <div id="Card2-card-body">
 <div id="Card2-card-item0">Sticker personalizat <span class="badge" style="background-color:#000000;color:#E7B360">80bani/cm</span></div>
 <div id="Card2-card-item1">sticker din vinil cu design personalizat</div>
 <img id="Card2-card-item2" src="images/351710772_181965944565817_5049548119904276874_n.jpg" width="1536" height="2048" alt="" title="">
 </div>
 </div>
-<div id="wb_Card5" style="display:flex;width:100%;z-index:17;" class="card">
-<div id="Card5-card-body">
-<div id="Card5-card-item0">Coffee Latte<span class="badge" style="background-color:#000000;color:#E7B360">$8.95</span></div>
-<div id="Card5-card-item1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam</div>
 </div>
 </div>
 </div>
 </div>
+<div id="FlexGrid1">
 </div>
-</div>
-<div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:35;">
-<div id="wb_upIcon" style="position:absolute;left:9px;top:9px;width:24px;height:24px;text-align:center;z-index:18;">
+<div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:40;">
+<div id="wb_upIcon" style="position:absolute;left:9px;top:9px;width:24px;height:24px;text-align:center;z-index:21;">
 <a href="#intro"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
 </div>
+<a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb19.png" alt="WYSIWYG Web Builder" style="position:absolute;left:23px;top:4199px;margin: 0;border-width:0;z-index:250" width="88" height="31"></a>
 <div id="wb_contact">
 <div id="contact-overlay"></div>
 <div id="contact-divider-top">
@@ -302,42 +334,119 @@ $(document).ready(function()
 <div id="contact">
 <div class="row">
 <div class="col-1">
-<label for="coffeeCard2" id="contactLabel4" style="display:inline-block;width:275px;line-height:21px;z-index:19;">Contact:</label>
+<label for="coffeeCard2" id="contactLabel4" style="display:inline-block;width:275px;line-height:21px;z-index:22;">Contact:</label>
 <div id="wb_contactAddress">
 <p>Phone: 0740984220</p>
 <p>Email: craftstikers@yahoo.com</p>
 </div>
-<label for="coffeeCard2" id="contactLabel1" style="display:block;width:100%;line-height:21px;z-index:21;">Follow Us</label>
-<div id="wb_contactIcon2" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:22;">
+<label for="coffeeCard2" id="contactLabel1" style="display:block;width:100%;line-height:21px;z-index:24;">Follow Us</label>
+<div id="wb_contactIcon2" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:25;">
 <a href="https://www.facebook.com/profile.php?id=100083580183848"><div id="contactIcon2"><i class="fa fa-facebook"></i></div></a>
 </div>
-<div id="wb_contactIcon3" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:23;">
+<div id="wb_contactIcon3" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:26;">
 <a href="https://www.instagram.com/craftstikers/?fbclid=IwZXh0bgNhZW0CMTEAAR1QGKXt7oHE2ZrYo-fdVXBpPo5LXBCvH1P_842H6SdwM2Ewk5HlKABqSxc_aem_3x96sYfQM61EHgfhH2Eu3Q"><div id="contactIcon3"><i class="fa fa-instagram"></i></div></a>
 </div>
-<div id="wb_contactIcon4" style="display:inline-block;width:25px;height:30px;text-align:center;z-index:24;">
+<div id="wb_contactIcon4" style="display:inline-block;width:25px;height:30px;text-align:center;z-index:27;">
 <a href="https://www.tiktok.com/@craft_stickers?_t=8nyBctkO3O5&_r=1"><div id="contactIcon4"><i class="fa fa-tiktok"></i></div></a>
 </div>
 </div>
 <div class="col-2">
 </div>
 <div class="col-3">
-<label for="coffeeCard2" id="contactLabel3" style="display:inline-block;width:275px;line-height:21px;z-index:25;">Contact Us</label>
-<input type="text" id="contactName" style="display:block;width: 100%;height:38px;z-index:26;" name="name" value="" spellcheck="false" placeholder="Name">
-<input type="text" id="contactEmail" style="display:block;width: 100%;height:38px;z-index:27;" name="email" value="" spellcheck="false" placeholder="Email">
-<textarea name="message" id="contactMessage" style="display:block;width: 100%;;height:85px;z-index:28;" rows="2" cols="26" autocomplete="off" spellcheck="false" placeholder="Message"></textarea>
-<input type="submit" id="contactButton" name="" value="Send" style="display:block;width: 100%;;height:34px;z-index:29;">
+<label for="coffeeCard2" id="contactLabel3" style="display:inline-block;width:275px;line-height:21px;z-index:28;">Contact Us</label>
+<input type="text" id="contactName" style="display:block;width: 100%;height:38px;z-index:29;" name="name" value="" spellcheck="false" placeholder="Name">
+<input type="text" id="contactEmail" style="display:block;width: 100%;height:38px;z-index:30;" name="email" value="" spellcheck="false" placeholder="Email">
+<textarea name="message" id="contactMessage" style="display:block;width: 100%;;height:85px;z-index:31;" rows="2" cols="26" autocomplete="off" spellcheck="false" placeholder="Message"></textarea>
+<input type="submit" id="contactButton" name="" value="Send" style="display:block;width: 100%;;height:34px;z-index:32;">
 </div>
 </div>
 </div>
 </div>
-<div id="wb_LayoutGrid2">
-<div id="LayoutGrid2">
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
 <div class="row">
 <div class="col-1">
 </div>
+<div class="col-2">
 </div>
 </div>
 </div>
-<a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb19.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:3447px;margin: 0;border-width:0;z-index:250" width="88" height="31"></a>
+</div>
+<div id="wb_SlideShow2" style="position:absolute;left:132px;top:3511px;width:743px;height:393px;z-index:44;">
+<div id="SlideShow2" data-bs-ride="carousel" class="carousel slide">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" src="images/307955756_126745373454802_3892870329932705843_n.jpg" alt="" title="">
+</div>
+<div class="thumbnail">
+<img class="image" src="images/308012509_126745366788136_2938931842295374319_n.jpg" alt="" title="">
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" src="images/459410872_499465506182785_2216126295440802248_n.jpg" alt="" title="">
+</div>
+<div class="thumbnail">
+<img class="image" src="images/449760340_450362137759789_7788309304727546933_n.jpg" alt="" title="">
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" src="7c985c9a-154d-4692-b97a-a30531022d82.jpeg" alt="" title="">
+</div>
+<div class="thumbnail">
+<img class="image" src="8de35a79-3742-4abf-8337-153f1068d02f.jpeg" alt="" title="">
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" src="67444732-2834-4f4f-a3f1-1e22401f3ef4.jpeg" alt="" title="">
+</div>
+<div class="thumbnail">
+<img class="image" src="images/370415141_269123425883662_715739812385352868_n.jpg" alt="" title="">
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" src="images/351734761_1242191756493633_6985317548668741414_n.jpg" alt="" title="">
+</div>
+<div class="thumbnail">
+<img class="image" src="images/363486319_321244940345921_2745455621963557169_n.jpg" alt="" title="">
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" src="images/364250646_842042230765953_2085229531505904020_n.jpg" alt="" title="">
+</div>
+<div class="thumbnail">
+<img class="image" width="2048" height="1536" src="images/367370624_831322761916733_3034043491393475528_n.jpg" alt="" title="">
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="thumbnails">
+<div class="thumbnail">
+<img class="image" width="2048" height="1536" src="images/371480537_838489731222895_1317565077537327563_n.jpg" alt="" title="">
+</div>
+<div class="thumbnail">
+<img class="image" width="2048" height="1536" src="images/hoinar.jpg" alt="" title="">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
